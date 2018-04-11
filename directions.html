@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Directions Kiku Bistro</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .topnav {
+            background-color: rgb(102,169,168);
+            overflow: hidden;
+            position: fixed;
+            top: 0px;
+            transition: top 0.3s;
+        }
+
+        .topnav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 32px 65px;
+            text-decoration: none;
+            font-size: 25px;
+            font-family: "Raleway";
+            font-weight: normal;
+        }
+
+        .logo {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 15px 65px;
+            text-decoration: none;
+            font-size: 55px;
+            font-family: "Amatic SC";
+            font-weight: normal;
+        }
+
+        .topnav a:hover {
+            border-bottom: 5px solid rgb(44,115,121);
+        }
+
+
+        .topnav .icon {
+            display: none;
+        }
+
+        .topnav a.active {
+            background-color: rgb(44, 115, 121);
+            color: rgb(191, 209, 211);
+        }
+
+        @media screen and (max-width: 1173px) {
+            .topnav a:not(:first-child) {display: none;}
+            .topnav a.icon {
+                float: right;
+                display: block;
+            }
+        }
+
+
+        @media screen and (max-width: 600px) {
+            .topnav.responsive {position: relative;}
+            .topnav.responsive .icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            .topnav.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+        }
+
+        body {
+            background-image: url("images/Artboard 1 copy.png");
+        }
+        .boxmap {
+            width: 600px;
+            height: 800px;
+            padding-top: 200px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="topnav" id="myTopnav">
+        <a>Order online</a>
+        <a>Menu</a>
+        <a href="homepage.html" style="padding-top: 15px; padding-bottom: 15px; font-size: 55px; font-family: 'Amatic SC'">Kiku Bistro</a>
+        <a class="active">About</a>
+        <a href="directions.html">Contact</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+</header>
+
+</body>
+</html>
